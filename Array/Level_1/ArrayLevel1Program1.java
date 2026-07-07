@@ -2,7 +2,7 @@ import java.util.*;
 
  // 1. Input n and take n integers into an array; print them.
 
-public class ArrayProgram1 {
+public class ArrayLevel1Program1 {
     public static void main(String [] args) {
         System.out.println("Enter size of array");
         Scanner sc = new Scanner(System.in);

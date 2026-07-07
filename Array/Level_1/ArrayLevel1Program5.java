@@ -1,8 +1,8 @@
 import java.util.*;
 
-// 3. Find the average of array elements.
+// 5. Find the minimum element in an array.
 
-public class ArrayProgram3 {
+public class ArrayLevel1Program5 {
     public static void main(String [] args) {
         System.out.println("Enter size of array");
         Scanner sc = new Scanner(System.in);
@@ -16,17 +16,18 @@ public class ArrayProgram3 {
             int element = sc.nextInt();
             array[i] = element;
         }
-        double result = getAverage(array);
+        int result = getMinElement(array);
 
-        System.out.println("Average of array element is : "+result);
+        System.out.println("Minimum element in array is : "+result);
     }
 
-    public static double getAverage(int [] array) {
-        int sum = 0;
-        for(int item: array) {
-            sum = sum + item;
+    public static int getMinElement(int [] array) {
+        int min = Integer.MAX_VALUE;
+        for(int i=0;i<array.length;i++) {
+            if (array[i] < min) {
+                min = array[i];
+            }
         }
-        double avg = (double) sum/(array.length);
-        return avg;
+        return min;
     }
 }

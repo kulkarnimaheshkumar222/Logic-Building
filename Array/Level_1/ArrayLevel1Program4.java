@@ -1,8 +1,8 @@
 import java.util.*;
 
-// 5. Find the minimum element in an array.
+// 4. Find the maximum element in an array.
 
-public class ArrayProgram5 {
+public class ArrayLevel1Program4 {
     public static void main(String [] args) {
         System.out.println("Enter size of array");
         Scanner sc = new Scanner(System.in);
@@ -16,18 +16,18 @@ public class ArrayProgram5 {
             int element = sc.nextInt();
             array[i] = element;
         }
-        int result = getMinElement(array);
+        int result = getMaxElement(array);
 
-        System.out.println("Minimum element in array is : "+result);
+        System.out.println("Maximum element in array is : "+result);
     }
 
-    public static int getMinElement(int [] array) {
-        int min = Integer.MAX_VALUE;
+    public static int getMaxElement(int [] array) {
+        int max = Integer.MIN_VALUE;
         for(int i=0;i<array.length;i++) {
-            if (array[i] < min) {
-                min = array[i];
+            if (array[i] > max) {
+                max = array[i];
             }
         }
-        return min;
+        return max;
     }
 }

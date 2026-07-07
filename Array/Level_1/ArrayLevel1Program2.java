@@ -1,7 +1,7 @@
 import java.util.*;
 // 2. Find the sum of all elements in an array.
 
-public class ArrayProgram2 {
+public class ArrayLevel1Program2 {
     public static void main(String [] args) {
         System.out.println("Enter size of array");
         Scanner sc = new Scanner(System.in);

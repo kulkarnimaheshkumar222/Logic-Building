@@ -1,8 +1,8 @@
 import java.util.*;
 
-// 7.Count how many elements are even and odd.
+// 6.Count how many elements are positive, negative, or zero.
 
-public class ArrayProgram7 {
+public class ArrayLevel1Program6 {
     public static void main(String [] args) {
         System.out.println("Enter size of array");
         Scanner sc = new Scanner(System.in);
@@ -17,23 +17,34 @@ public class ArrayProgram7 {
             array[i] = element;
         }
         
-        System.out.println("Even elements in array are: "+countEvenElements(array)+",odd elements are: "+countOddElements(array));
+        System.out.println("Positive elements in array are: "+getPositiveElements(array)+",Negative elements are: "+getNegativeElements(array)+" and zeros are: "+countZeros(
+            array));
     }
 
-    public static int countEvenElements(int [] array) {
+    public static int getPositiveElements(int [] array) {
         int count = 0;
         for(int i=0;i<array.length;i++) {
-            if (array[i]%2 == 0) {
+            if (array[i] > 0) {
                 count++;
             }
         }
         return count;
     }
 
-    public static int countOddElements(int [] array) {
+    public static int countZeros(int [] array) {
         int count = 0;
         for(int i=0;i<array.length;i++) {
-            if (array[i]%2 != 0) {
+            if (array[i] == 0) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public static int getNegativeElements(int [] array) {
+        int count = 0;
+        for(int i=0;i<array.length;i++) {
+            if (array[i] < 0) {
                 count++;
             }
         }

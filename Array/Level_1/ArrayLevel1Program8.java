@@ -1,8 +1,8 @@
 import java.util.*;
 
-// 9. Find the index of the maximum element.
+// 8.Find the index of the maximum element.
 
-public class ArrayProgram9 {
+public class ArrayLevel1Program8 {
     public static void main(String [] args) {
         System.out.println("Enter size of array");
         Scanner sc = new Scanner(System.in);
@@ -17,16 +17,16 @@ public class ArrayProgram9 {
             array[i] = element;
         }
         
-        System.out.println("Index of min element is "+ findIndexOfMinElement(array));
+        System.out.println("Index of max element is "+ findIndexOfMaxElement(array));
     }
 
-    public static int findIndexOfMinElement(int [] array) {
-        int minElementIndex = 0;
+    public static int findIndexOfMaxElement(int [] array) {
+        int maxElementIndex = 0;
         for(int i=1;i<array.length;i++) {
-            if (array[i] < array[minElementIndex]) {
-                minElementIndex = i;
+            if (array[i] > array[maxElementIndex]) {
+                maxElementIndex = i;
             }
         }
-        return minElementIndex;
+        return maxElementIndex;
     }
 }
